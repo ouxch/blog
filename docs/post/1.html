@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="en">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -12,11 +12,45 @@
     </script>
 <meta name="description" content="## `JRE`和`JDK`
 
-`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。">
+`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。
+
+
+`JRE`：`Java`运行环境，包含了`Java`虚拟机(`JVM`)和`Java`类库，以及一些模块等，它不能⽤于构建新的程序；
+`JDK`：可以看作是`JRE`的一个超集，它拥有JRE所拥有的⼀切，提供了更多工具，比如编译器(`javac`)、文档工具(`javadoc`)、调试/诊断/监控工具(`jdb` `jstat` `jmap` `jstack` `jhat`)等，它能够创建和编译程序。
+
+理论上如果只是为了运⾏⼀下`Java`程序的话，安装`JRE`就可以了。要做`Java`编程⽅⾯的⼯作，才需要安装`JDK`。但是这个也不绝对，如果要运行一些`JSP`的`Web`应⽤程序，就是以前那种前后端不分离的，那还是需要安装`JDK`，因为它需要把`JSP`转换为`Java`的`Servlet`，然后用JDK来编译`Servlet`。还有运行时的动态代理也需要`JDK`动态编译。
+
+## `Java`最显著的特性
+
+一是所谓的“书写一次，到处运行”(Write once, run anywhere)，能够非常容易地获得跨平台能力；
+二是垃圾收集(GC, Garbage Collection)，`Java`通过垃圾收集器(Garbage Collector)回收分配内存，大部分情况下，程序员不需要自己操心内存的分配和回收。
+
+## `Java`是解释执行的语言
+
+这个说法现在来看已经不太准确。
+
+通常把`Java`分为编译期和运行时，这里说的`Java`的编译和`C/C++`是有着不同的意义的，`Javac`编译`Java`源码生成的`.">
 <meta property="og:title" content="对Java平台的理解">
 <meta property="og:description" content="## `JRE`和`JDK`
 
-`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。">
+`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。
+
+
+`JRE`：`Java`运行环境，包含了`Java`虚拟机(`JVM`)和`Java`类库，以及一些模块等，它不能⽤于构建新的程序；
+`JDK`：可以看作是`JRE`的一个超集，它拥有JRE所拥有的⼀切，提供了更多工具，比如编译器(`javac`)、文档工具(`javadoc`)、调试/诊断/监控工具(`jdb` `jstat` `jmap` `jstack` `jhat`)等，它能够创建和编译程序。
+
+理论上如果只是为了运⾏⼀下`Java`程序的话，安装`JRE`就可以了。要做`Java`编程⽅⾯的⼯作，才需要安装`JDK`。但是这个也不绝对，如果要运行一些`JSP`的`Web`应⽤程序，就是以前那种前后端不分离的，那还是需要安装`JDK`，因为它需要把`JSP`转换为`Java`的`Servlet`，然后用JDK来编译`Servlet`。还有运行时的动态代理也需要`JDK`动态编译。
+
+## `Java`最显著的特性
+
+一是所谓的“书写一次，到处运行”(Write once, run anywhere)，能够非常容易地获得跨平台能力；
+二是垃圾收集(GC, Garbage Collection)，`Java`通过垃圾收集器(Garbage Collector)回收分配内存，大部分情况下，程序员不需要自己操心内存的分配和回收。
+
+## `Java`是解释执行的语言
+
+这个说法现在来看已经不太准确。
+
+通常把`Java`分为编译期和运行时，这里说的`Java`的编译和`C/C++`是有着不同的意义的，`Javac`编译`Java`源码生成的`.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ouxch.github.io/post/1.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/ouxch/ouxch.github.io/main/favicon.png">
@@ -54,7 +88,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">
 <h1 class="postTitle">对Java平台的理解</h1>
 <div class="title-right">
-    <a href="https://ouxch.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+    <a href="https://ouxch.github.io" id="buttonHome" class="btn btn-invisible circle" title="home">
         <svg class="octicon" width="16" height="16">
             <path id="pathHome" fill-rule="evenodd"></path>
         </svg>
@@ -67,7 +101,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     </a>
     
 
-    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="switch theme">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
@@ -132,7 +166,7 @@ jaotc --output libjava.base.so --module java.base</pre></div>
 </div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
-<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">comments</button>
 <div class="comments" id="comments"></div>
 
 </div>
@@ -149,7 +183,7 @@ if("07/29/2024"!=""){
     var startSite=new Date("07/29/2024");
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
-    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+    document.getElementById("runday").innerHTML="run "+diffDay+" days"+" • ";
 }
 </script></div>
 </body>
