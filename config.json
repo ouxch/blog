@@ -10,7 +10,7 @@
     "urlMode": "issue",
     "showPostSource": 1,
     "themeMode": "fix",
-    "dayTheme": "github-dark",
-    "nightTheme": "github-dark",
+    "dayTheme": "dark_dimmed",
+    "nightTheme": "dark-blue",
     "yearColorList": ["#000000"]
 }
