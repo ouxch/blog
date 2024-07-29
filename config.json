@@ -5,7 +5,9 @@
     "GMEEK_VERSION": "last",
     "email": "ouxch@qq.com",
     "startSite": "07/29/2024",
-    "showPostSource": 1,
-    "yearColorList":["#1f2328"],
-    "urlMode":"issue"
+    "i18n": "EN",
+    "UTC": 8,
+    "themeMode": "manual",
+    "urlMode": "issue",
+    "showPostSource": 1
 }
