@@ -1,6 +1,9 @@
 {
-    "title":"欧小川的网络日志",
-    "subTitle":"一些不适合发在朋友圈的内容",
-    "avatarUrl":"https://raw.githubusercontent.com/ouxch/ouxch.github.io/main/favicon.png",
-    "GMEEK_VERSION":"last"
+    "title": "欧小川的网络日志",
+    "subTitle": "一些不适合发在朋友圈的内容",
+    "avatarUrl": "https://raw.githubusercontent.com/ouxch/ouxch.github.io/main/favicon.png",
+    "GMEEK_VERSION": "last",
+    "email": "ouxch@qq.com",
+    "startSite": "07/29/2024",
+    "showPostSource": 1
 }
