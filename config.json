@@ -7,7 +7,10 @@
     "startSite": "07/29/2024",
     "i18n": "EN",
     "UTC": 8,
-    "themeMode": "manual",
     "urlMode": "issue",
-    "showPostSource": 1
+    "showPostSource": 1,
+    "themeMode": "fix",
+    "dayTheme": "github-dark",
+    "nightTheme": "github-dark",
+    "yearColorList": ["#000000"]
 }
