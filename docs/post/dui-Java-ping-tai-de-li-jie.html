@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="## `JRE`和`JDK`
+
+`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。">
+<meta property="og:title" content="对Java平台的理解">
+<meta property="og:description" content="## `JRE`和`JDK`
+
+`Java`是一种面向对象的语言，通常学习`Java`首先接触的就是`JRE(Java Runtime Environment)`或者`JDK(Java Development Kit)`。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ouxch.github.io/post/dui-Java-ping-tai-de-li-jie.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>对Java平台的理解</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">对Java平台的理解</h1>
+<div class="title-right">
+    <a href="https://ouxch.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/ouxch/ouxch.github.io/issues/1" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h2><code class="notranslate">JRE</code>和<code class="notranslate">JDK</code></h2>
+<p><code class="notranslate">Java</code>是一种面向对象的语言，通常学习<code class="notranslate">Java</code>首先接触的就是<code class="notranslate">JRE(Java Runtime Environment)</code>或者<code class="notranslate">JDK(Java Development Kit)</code>。</p>
+<p><code class="notranslate">JRE</code>：<code class="notranslate">Java</code>运行环境，包含了<code class="notranslate">Java</code>虚拟机(<code class="notranslate">JVM</code>)和<code class="notranslate">Java</code>类库，以及一些模块等，它不能⽤于构建新的程序；<br>
+<code class="notranslate">JDK</code>：可以看作是<code class="notranslate">JRE</code>的一个超集，它拥有JRE所拥有的⼀切，提供了更多工具，比如编译器(<code class="notranslate">javac</code>)、文档工具(<code class="notranslate">javadoc</code>)、调试/诊断/监控工具(<code class="notranslate">jdb</code> <code class="notranslate">jstat</code> <code class="notranslate">jmap</code> <code class="notranslate">jstack</code> <code class="notranslate">jhat</code>)等，它能够创建和编译程序。</p>
+<p>理论上如果只是为了运⾏⼀下<code class="notranslate">Java</code>程序的话，安装<code class="notranslate">JRE</code>就可以了。要做<code class="notranslate">Java</code>编程⽅⾯的⼯作，才需要安装<code class="notranslate">JDK</code>。但是这个也不绝对，如果要运行一些<code class="notranslate">JSP</code>的<code class="notranslate">Web</code>应⽤程序，就是以前那种前后端不分离的，那还是需要安装<code class="notranslate">JDK</code>，因为它需要把<code class="notranslate">JSP</code>转换为<code class="notranslate">Java</code>的<code class="notranslate">Servlet</code>，然后用JDK来编译<code class="notranslate">Servlet</code>。还有运行时的动态代理也需要<code class="notranslate">JDK</code>动态编译。</p>
+<h2><code class="notranslate">Java</code>最显著的特性</h2>
+<p>一是所谓的“书写一次，到处运行”(Write once, run anywhere)，能够非常容易地获得跨平台能力；<br>
+二是垃圾收集(GC, Garbage Collection)，<code class="notranslate">Java</code>通过垃圾收集器(Garbage Collector)回收分配内存，大部分情况下，程序员不需要自己操心内存的分配和回收。</p>
+<h2><code class="notranslate">Java</code>是解释执行的语言</h2>
+<p>这个说法现在来看已经不太准确。</p>
+<p>通常把<code class="notranslate">Java</code>分为编译期和运行时，这里说的<code class="notranslate">Java</code>的编译和<code class="notranslate">C/C++</code>是有着不同的意义的，<code class="notranslate">Javac</code>编译<code class="notranslate">Java</code>源码生成的<code class="notranslate">.class</code>文件里面实际是字节码，而不是可以直接执行的机器码。<code class="notranslate">Java</code>通过字节码和<code class="notranslate">Java</code>虚拟机<code class="notranslate">JVM</code>这种跨平台的抽象，屏蔽了操作系统和硬件的细节，这也是实现“一次编译，到处执行”的基础。</p>
+<p>我们开发的<code class="notranslate">Java</code>的源代码，首先通过<code class="notranslate">Javac</code>编译成为字节码<code class="notranslate">bytecode</code>，然后，在运行时通过<code class="notranslate">Java</code>虚拟机<code class="notranslate">JVM</code>内嵌的解释器将字节码转换成为最终的机器码。</p>
+<pre lang="flow" class="notranslate"><code class="notranslate">st=&gt;inputoutput: .java 源代码文件
+op1=&gt;operation: javac 编译
+io1=&gt;inputoutput: .class 字节码文件
+op2=&gt;operation: jvm 解释器逐行解释
+io2=&gt;inputoutput: 二进制机器码(机器可以直接执行)
+
+st-&gt;op1(right)-&gt;io1-&gt;op2(right)-&gt;io2
+</code></pre>
+<p>机器码的运⾏效率肯定是⾼于逐行解释执行的。所以主流的JVM比如我们大多数情况使用的<code class="notranslate">Oracle JDK</code>提供的<code class="notranslate">Hotspot JVM</code>，都提供了<code class="notranslate">JIT(Just-In-Time)</code>编译器，也就是通常所说的动态编译器。<code class="notranslate">JIT</code>能够在运行时将热点代码编译成本地机器码，并将字节码对应的机器码保存下来，下次可以直接使⽤。这种情况下部分热点代码就属于编译执行，而不是解释执行了。</p>
+<p>至于哪部分属于热点代码，<code class="notranslate">HotSpot</code>采⽤的是惰性评估(Lazy Evaluation)的做法，根据⼆⼋定律，消耗⼤部分系统资源的只有那⼀⼩部分的代码(热点代码)。</p>
+<p>所以主流<code class="notranslate">Java</code>版本，实际是解释和编译混合的一种模式，即所谓的混合模式<code class="notranslate">-Xmixed</code>。通常运行在<code class="notranslate">server</code>模式的<code class="notranslate">JVM</code>，会进行上万次调用以收集足够的信息进行高效的编译，<code class="notranslate">client</code>模式这个门限是<code class="notranslate">1500</code>次。<code class="notranslate">Oracle Hotspot JVM</code>内置了两个不同的<code class="notranslate">JIT compiler</code>，<code class="notranslate">C1</code>对应前面说的<code class="notranslate">client</code>模式，适用于对于启动速度敏感的应用，比如普通<code class="notranslate">Java</code>桌面应用；<code class="notranslate">C2</code>对应<code class="notranslate">server</code>模式，它的优化是为长时间运行的服务器端应用设计的。默认是采用所谓的分层编译<code class="notranslate">TieredCompilation</code>。</p>
+<p>Java 虚拟机启动时，可以指定不同的参数对运行模式进行选择。 比如，指定<code class="notranslate">-Xint</code>，就是告诉<code class="notranslate">JVM</code>只进行解释执行，不对代码进行编译，这种模式抛弃了<code class="notranslate">JIT</code>可能带来的性能优势。毕竟解释器<code class="notranslate">interpreter</code>是逐条读入，逐条解释运行的。与其相对应的，还有一个<code class="notranslate">-Xcomp</code>参数，这是告诉<code class="notranslate">JVM</code>关闭解释器，不要进行解释执行，或者叫作最大优化级别。但这种模式未必就是最高效的，<code class="notranslate">-Xcomp</code>会导致<code class="notranslate">JVM</code>启动变慢非常多，同时有些<code class="notranslate">JIT</code>编译器优化方式，比如分支预测，如果不进行<code class="notranslate">profiling</code>，往往并不能进行有效优化。</p>
+<p>除了上面提到的<code class="notranslate">JIT</code>，其实还有一种新的编译方式，即所谓的<code class="notranslate">AOT(Ahead-of-Time Compilation)</code>，直接将字节码编译成机器代码，这样就避免了<code class="notranslate">JIT</code>预热等各方面的开销，比如<code class="notranslate">Oracle JDK 9</code>就引入了实验性的<code class="notranslate">AOT</code>特性 ，并且增加了新的<code class="notranslate">jaotc</code>工具。<br>
+利用下面的命令把某个类或者某个模块编译成为<code class="notranslate">AOT</code>库：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">jaotc --output libHelloWorld.so HelloWorld.class
+jaotc --output libjava.base.so --module java.base</pre></div>
+<p>然后，在启动时直接指定编译好的 AOT 库：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">java -XX:AOTLibrary=./libHelloWorld.so,./libjava.base.so HelloWorld</pre></div>
+<p>目前<code class="notranslate">AOT</code>编译器的编译质量肯定是比不上<code class="notranslate">JIT</code>编译器的，<code class="notranslate">Oracle JDK</code>支持分层编译和<code class="notranslate">AOT</code>协作使用，这两者并不是二选一的关系，相关文档：<a href="http://openjdk.java.net/jeps/295" rel="nofollow">http://openjdk.java.net/jeps/295</a>。<code class="notranslate">AOT</code>也不仅仅是只有这一种方式，业界早就有第三方工具(如<code class="notranslate">GCJ</code>、<code class="notranslate">Excelsior JET</code>)提供相关功能。</p>
+<p>另外，<code class="notranslate">JVM</code>作为一个强大的平台，不仅仅只有<code class="notranslate">Java</code>语言可以运行在<code class="notranslate">JVM</code>上，本质上合规的字节码都可以运行，<code class="notranslate">Java</code>语言自身也为此提供了便利，所以我们可以看到类似<code class="notranslate">Kotlin、Clojure、Scala、Groovy、JRuby、Jython</code>等大量<code class="notranslate">JVM</code>语言，活跃在不同的场景。</p>
+<p>目前程序主要有两种运行方式：静态编译与动态解释；<br>
+静态编译的程序在执行前全部被翻译为机器码，通常将这种方式称为<code class="notranslate">AOT(Ahead of time)</code>，即“提前编译”；<br>
+解释执行的程序则是一句一句的边翻译边运行，通常将这种方式称为<code class="notranslate">JIT(Just-in-time)</code>，即“即时编译”；<br>
+<code class="notranslate">AOT</code>程序的典型代表是用<code class="notranslate">C/C++</code>开发的应用，它们必须在执行前编译成机器码，而<code class="notranslate">JIT</code>的代表则非常多，如<code class="notranslate">JavaScript、Python</code>等；<br>
+事实上，所有脚本语言都支持<code class="notranslate">JIT</code>模式。但需要注意的是<code class="notranslate">JIT</code>和<code class="notranslate">AOT</code>指的是程序运行方式，和编程语言并非强关联的。有些语言既可以以<code class="notranslate">JIT</code>方式运行也可以以<code class="notranslate">AOT</code>方式运行，如<code class="notranslate">Java、Python</code>。</p>
+<hr>
+<h2>进一步理解<code class="notranslate">Java</code>平台</h2>
+<h3><code class="notranslate">Java</code>语言特性</h3>
+<p>泛型、Lambda 等。</p>
+<h3><code class="notranslate">Java</code>基础类库</h3>
+<p>集合、IO/NIO、网络、并发、安全等。</p>
+<h3><code class="notranslate">Java</code>类加载机制</h3>
+<p>常用版本<code class="notranslate">JDK(如 JDK 8)</code>内嵌的<code class="notranslate">Class-Loader</code>，例如<code class="notranslate">Bootstrap</code>、<code class="notranslate">Application</code>和<code class="notranslate">Extension Class-loader</code>；<br>
+自定义<code class="notranslate">Class-Loader</code>。</p>
+<h3><code class="notranslate">Java</code>类加载过程</h3>
+<p>加载、验证、链接、初始化(参考周志明的《深入理解Java虚拟机》)。</p>
+<h3><code class="notranslate">Java</code>垃圾收集</h3>
+<p>垃圾收集的基本原理；<br>
+常见的垃圾收集器，如<code class="notranslate">SerialGC、Parallel GC、 CMS、 G1</code>等，分别适用于什么样的工作负载；</p>
+<h3><code class="notranslate">Java</code>工具</h3>
+<p><code class="notranslate">JDK</code>包含的工具以及<code class="notranslate">Java</code>领域内其他工具，编译器、运行时环境、安全工具、诊断和监控工具等</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://ouxch.github.io">Blog Title</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","ouxch/ouxch.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+</html>
