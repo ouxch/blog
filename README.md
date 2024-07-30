@@ -1,6 +1,6 @@
-# ouxch's log :link: https://ouxch.github.io 
+# 欧小川的网络日志 :link: https://ouxch.github.io 
 ### :page_facing_up: [3](https://ouxch.github.io/tag.html) 
 ### :speech_balloon: 0 
 ### :hibiscus: 3937 
-### :alarm_clock: 2024-07-30 13:30:52 
+### :alarm_clock: 2024-07-30 13:39:42 
 ### Powered by :heart: [Gmeek](https://github.com/Meekdai/Gmeek)
