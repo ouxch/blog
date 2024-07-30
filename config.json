@@ -9,9 +9,9 @@
     "UTC": 8,
     "urlMode": "issue",
     "showPostSource": 1,
-    "themeMode": "fix",
-    "dayTheme": "dark_dimmed",
-    "nightTheme": "dark-blue",
+    "themeMode":"fix",
+    "dayTheme":"dark",
+    "nightTheme":"dark-blue",
     "yearColorList": ["#000000"],
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
