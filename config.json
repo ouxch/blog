@@ -1,17 +1,17 @@
 {
-    "title": "ouxch's log",
-    "subTitle": "Some content not suitable for posting on WeChat Moments.",
+    "title": "欧小川的网络日志",
+    "subTitle": "不适合发在朋友圈的内容",
     "avatarUrl": "https://raw.githubusercontent.com/ouxch/ouxch.github.io/main/favicon.jpg",
     "GMEEK_VERSION": "last",
+    "displayTitle": "ShakeShoulders",
     "email": "ouxch@qq.com",
     "startSite": "07/29/2024",
-    "i18n": "EN",
+    "i18n": "CN",
     "UTC": 8,
     "urlMode": "issue",
     "showPostSource": 1,
     "themeMode":"fix",
-    "dayTheme":"dark",
+    "dayTheme":"dark_colorblind",
     "nightTheme":"dark-blue",
-    "yearColorList": ["#000000"],
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
