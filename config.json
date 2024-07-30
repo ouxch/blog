@@ -1,6 +1,6 @@
 {
     "title": "欧小川的网络日志",
-    "subTitle": "不适合发在朋友圈的内容",
+    "subTitle": "一些不适合发在朋友圈儿的内容",
     "avatarUrl": "https://raw.githubusercontent.com/ouxch/ouxch.github.io/main/favicon.jpg",
     "GMEEK_VERSION": "last",
     "displayTitle": "ShakeShoulders",
@@ -10,8 +10,8 @@
     "UTC": 8,
     "urlMode": "issue",
     "showPostSource": 1,
-    "themeMode":"fix",
-    "dayTheme":"dark_colorblind",
-    "nightTheme":"dark-blue",
+    "themeMode":"manual",
+    "dayTheme":"light",
+    "nightTheme":"dark",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
