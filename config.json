@@ -11,6 +11,7 @@
     "UTC": 8,
     "urlMode": "issue",
     "showPostSource": 1,
+    "disableCamo": 1,
     "themeMode":"manual",
     "dayTheme":"light",
     "nightTheme":"dark",
