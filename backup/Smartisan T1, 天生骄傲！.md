@@ -2,6 +2,6 @@ Uncomfortable, is the new comfortable.
 Right is right, Left is also right.
 Smartisan T1, Born to be proud!
 
-![SmartisanT1Black](https://s21.ax1x.com/2024/08/01/pkXKhrR.jpg)
+<img src="https://s21.ax1x.com/2024/08/01/pkXKhrR.jpg"/>
 
 <!-- ##{"timestamp":1400515200}## -->
