@@ -4,7 +4,7 @@
     "avatarUrl": "https://s21.ax1x.com/2024/08/01/pkXEJlq.jpg",
     "GMEEK_VERSION": "last",
     "displayTitle": "ShakeShoulders",
-    "homeUrl":"https://blog.65536.tech",
+    "homeUrl": "https://blog.65536.tech",
     "email": "ouxch@qq.com",
     "startSite": "07/29/2024",
     "i18n": "CN",
@@ -12,8 +12,8 @@
     "urlMode": "issue",
     "showPostSource": 1,
     "disableCamo": 1,
-    "themeMode":"manual",
-    "dayTheme":"light",
-    "nightTheme":"dark",
-    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
+    "themeMode": "manual",
+    "dayTheme": "light",
+    "nightTheme": "dark",
+    "allHead": "<script src='https://blog.65536.tech/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
