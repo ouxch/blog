@@ -15,5 +15,5 @@
     "themeMode": "manual",
     "dayTheme": "light",
     "nightTheme": "dark",
-    "allHead": "<script src='https://blog.65536.tech/GmeekBSZ.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
+    "allHead": "<script src='https://blog.65536.tech/GmeekVercount.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>"
 }
