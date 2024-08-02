@@ -12,9 +12,9 @@
     "urlMode": "issue",
     "showPostSource": 1,
     "disableCamo": 1,
-    "themeMode": "manual",
-    "dayTheme": "light",
-    "nightTheme": "dark",
+    "themeMode": "fix",
+    "dayTheme": "dark",
+    "nightTheme": "dark-blue",
     "backgroundImageUrl": "https://blog.65536.website/background.jpg",
     "allHead": "<script src='https://blog.65536.website/GmeekVercount.js'></script><script src='https://blog.65536.website/GmeekTOC.js'></script>"
 }
