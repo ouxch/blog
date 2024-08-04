@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.onscroll = function() {
         const backToTopButton = document.querySelector('.toc-end');
+        if(!backToTopButton) return;
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             backToTopButton.style="visibility: visible;"
         } else {
