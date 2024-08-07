@@ -112,6 +112,10 @@ request.responseType='text';
 request.send();
 request.onload=function(){
     jsonData=JSON.parse(request.response);
+    labelColors = jsonData['labelColorDict'];
+    Object.keys(labelColors).forEach(function(name){
+        labelColors[name] = "transparent";
+    });
     console.log(jsonData);
     showList(labelsCount);
     setClassDisplay(decodeURI(window.location.hash.slice(1)));
@@ -161,7 +165,7 @@ function showList(labelsCount){
             center.setAttribute("class","d-flex flex-items-center");
 
             svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
-            path=document.createElementNS("http://www.w3.org/2000/svg","path"); 
+            path=document.createElementNS("http://www.w3.org/2000/svg","path");
             span=document.createElement("span");
             svg.setAttributeNS(null,"class","SideNav-icon octicon");
             svg.setAttributeNS(null,"style","width:16px;height:16px");
@@ -176,7 +180,7 @@ function showList(labelsCount){
 
             let listLabels=document.createElement("div");
             listLabels.setAttribute("class","listLabels");
-            
+
             for(label of jsonData[i]['labels']){
                 let LabelName=document.createElement("span");
                 LabelName.setAttribute("class","Label LabelName");
